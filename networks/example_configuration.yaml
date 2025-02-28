@@ -1,0 +1,31 @@
+---
+# nice to have, but optional
+name: "friendly name of the network"
+
+# if true, all of the tests must pass for this configuration to match
+# if false, only one test must pass for this configuration to match
+require_all_matches: true
+
+# if the external (Internet-facing) IP address of this network falls in
+# this range, then this test passes.  It supports CIDR notation or just
+# a single IP address.  This may be less reliable than other methods if
+# the external IP address is dynamic.
+external_ip_address: "1.2.3.4/29"
+
+# this is the internal MAC address for the default gateway.  This may
+# be less reliable depending on how the network is configured (e.g.,
+# subnets, access points, routers, etc.) as compared to other methods.
+# If the gateway is pretty static, this may work reasonably well.
+gateway_mac_address: "12:34:56:78:90:ab"
+
+# this is probably one of the less-useful tests -- the internal IP
+# address of the default gateway.
+gateway_ip_address: "192.168.0.1"
+
+# these are commands that are to be run when this configuration matches
+# the current network state.  They're not actually run at all -- they're
+# written to STDOUT so that they can be examined, filtered, run through
+# post-processing (I'm looking at you, `sed` and  `envsubst`).  It can
+# be a single command or a list of commands (i.e., a YAML array).
+connect_commands:
+  - "echo 'hello world' > /tmp/network_based_config.txt"

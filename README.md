@@ -1,5 +1,10 @@
 # Network Based Configuration
 
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/wesley-dean/network-based-config/badge)](https://scorecard.dev/viewer/?uri=github.com/wesley-dean/network-based-config)
+[![CodeQL Advanced](https://github.com/wesley-dean/network-based-config/actions/workflows/codeql.yml/badge.svg)](https://github.com/wesley-dean/network-based-config/actions/workflows/codeql.yml)
+[![Dependabot Updates](https://github.com/wesley-dean/network-based-config/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/wesley-dean/network-based-config/actions/workflows/dependabot/dependabot-updates)
+[![MegaLinter](https://github.com/wesley-dean/network-based-config/actions/workflows/megalinter.yml/badge.svg)](https://github.com/wesley-dean/network-based-config/actions/workflows/megalinter.yml)
+
 ## Introduction
 
 Linux provides us with a mechanism to run commands when network

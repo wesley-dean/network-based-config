@@ -1,5 +1,10 @@
 # Network Based Configuration
 
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/wesley-dean/network-based-config/badge)](https://scorecard.dev/viewer/?uri=github.com/wesley-dean/network-based-config)
+[![CodeQL Advanced](https://github.com/wesley-dean/network-based-config/actions/workflows/codeql.yml/badge.svg)](https://github.com/wesley-dean/network-based-config/actions/workflows/codeql.yml)
+[![Dependabot Updates](https://github.com/wesley-dean/network-based-config/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/wesley-dean/network-based-config/actions/workflows/dependabot/dependabot-updates)
+[![MegaLinter](https://github.com/wesley-dean/network-based-config/actions/workflows/megalinter.yml/badge.svg)](https://github.com/wesley-dean/network-based-config/actions/workflows/megalinter.yml)
+
 ## Introduction
 
 Linux provides us with a mechanism to run commands when network
@@ -77,9 +82,13 @@ The tool uses environment variables to configure its core functionality:
 
 The tool also supports reading environment variables from `.env` files.
 
+```env
+CONFIG_FILE_PATTERN="./nteworks/*.yml"
+```
+
 ## TODO
 
 - network weight
   - only apply configurations for the highest weight
-  
+
 - external hostname (i.e., `nslookup` on the external IP address)

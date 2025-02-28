@@ -81,7 +81,6 @@ The tool also supports reading environment variables from `.env` files.
 CONFIG_FILE_PATTERN="./nteworks/*.yml"
 ```
 
-
 ## TODO
 
 - network weight

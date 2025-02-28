@@ -77,9 +77,14 @@ The tool uses environment variables to configure its core functionality:
 
 The tool also supports reading environment variables from `.env` files.
 
+```env
+CONFIG_FILE_PATTERN="./nteworks/*.yml"
+```
+
+
 ## TODO
 
 - network weight
   - only apply configurations for the highest weight
-  
+
 - external hostname (i.e., `nslookup` on the external IP address)

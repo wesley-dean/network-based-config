@@ -1,0 +1,7 @@
+getmac
+ipcalc
+netifaces
+python-dotenv
+pyyaml
+requests
+six

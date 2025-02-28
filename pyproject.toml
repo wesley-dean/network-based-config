@@ -1,0 +1,11 @@
+[tool.black]
+
+[tool.pylint]
+ignore-paths = '(venv|tests)'
+extension-pkg-whitelist="netifaces"
+
+[project]
+dynamic = ["dependencies"]
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+

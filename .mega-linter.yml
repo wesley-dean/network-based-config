@@ -1,0 +1,46 @@
+---
+# don't use Mega-Linter to test the reports Mega-Linter created
+ADDITIONAL_EXCLUDED_DIRECTORIES: [report, megalinter-reports, .git, site, tests]
+
+# don't scan files listed in .gitignore (e.g., node_modules)
+IGNORE_GITIGNORED_FILES: true
+
+# Disable devskim as it's reporting an error with no log message
+DISABLE_LINTERS:
+  [
+    REPOSITORY_DEVSKIM,
+    SPELL_MISSPELL,
+    SPELL_CSPELL,
+    SPELL_PROSELINT,
+    COPYPASTE_JSCPD,
+    BASH_EXEC,
+    SPELL_LYCHEE,
+    MARKDOWN_MARKDOWN_LINK_CHECK,
+  ]
+
+# scan only new / updated files, not everything
+VALIDATE_ALL_CODEBASE: false
+
+# don't print the alpaca -- it's cute, but we don't need it in the logs
+PRINT_ALPACA: false
+
+# don't fail on finding (yet)
+DISABLE_ERRORS: true
+
+# use prettier for JavaScript code formatting
+JAVASCRIPT_DEFAULT_STYLE: prettier
+
+# v6 supports SARIF reporters; our organization, however, does not.
+SARIF_REPORTER: false
+
+# only scan the files in This commit, not the entire history of the repo
+REPOSITORY_GITLEAKS_ARGUMENTS: --no-git
+
+# don't scan the .git directory GitHub creates at runtime
+REPOSITORY_TRUFFLEHOG_ARGUMENTS: "--exclude-paths=.trufflehogignore"
+
+# make sure Terraform modules are present
+REPOSITORY_CHECKOV_ARGUMENTS: "--download-external-modules true"
+
+# make sure Common Platform Enumerations (CPEs) are present
+REPOSITORY_GRYPE_ARGUMENTS: "--add-cpes-if-none"

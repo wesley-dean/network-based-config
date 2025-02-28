@@ -9,7 +9,10 @@ import netifaces
 def gateway_ip(gateway="default"):
     """return the IP address of the default gateway"""
     gateways = netifaces.gateways()
-    return gateways[gateway][netifaces.AF_INET][0]
+
+    if gateway in gateways and netifaces.AF_INET in gateways[gateway]:
+        return gateways[gateway][netifaces.AF_INET][0]
+    return None
 
 
 def gateway_mac(gateway="default"):

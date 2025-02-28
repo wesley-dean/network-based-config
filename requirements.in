@@ -5,3 +5,7 @@ python-dotenv
 pyyaml
 requests
 six
+types-requests
+types-PyYAML
+types-netifaces
+wheel

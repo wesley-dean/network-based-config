@@ -1,11 +1,12 @@
 [tool.black]
 
-[tool.pylint]
-ignore-paths = '(venv|tests)'
-extension-pkg-whitelist="netifaces"
+[tool.pylint."messages control"]
+disable=["import-error"]
 
 [project]
 dynamic = ["dependencies"]
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
 
+[tool.mypy]
+disable_error_code = ["import-untyped"]

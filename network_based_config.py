@@ -6,13 +6,12 @@
 import glob
 import os
 
-from dotenv import load_dotenv
 import ipcalc
-from yaml import safe_load, YAMLError
-
-from lib.normalize_mac import normalize_mac
+from dotenv import load_dotenv
 from lib.default_gateway import gateway_ip, gateway_mac
 from lib.external_ip_address import external_ip
+from lib.normalize_mac import normalize_mac
+from yaml import YAMLError, safe_load
 
 
 def matches_ip_address(item, key, test_ip_address):

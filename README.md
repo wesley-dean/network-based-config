@@ -5,7 +5,7 @@
 Linux provides us with a mechanism to run commands when network
 interfaces are brought up and down:
 
-[/etc/network/interfaces (5) man page](https://manpages.org/etc-network-interfaces/5)
+man page: [/etc/network/interfaces (5)](https://manpages.org/etc-network-interfaces/5)
 
 There are hooks for running scripts before and after interfaces are
 brought up and/or taken down:
